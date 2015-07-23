@@ -173,6 +173,8 @@ int main(int argc, char** argv) {
     SAYF("HTTP software = %s %s (ID %s)\n", r.http_name, r.http_flavor,
          (r.bad_sw == 2) ? "is fake" : (r.bad_sw ? "OS mismatch" : "seems legit"));
 
+  SAYF("MTU           = %u\n", r.link_mtu);
+
   if (!r.link_type[0])
     SAYF("Network link  = ???\n");
   else

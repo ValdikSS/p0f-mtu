@@ -88,6 +88,8 @@ void handle_query(struct p0f_api_query* q, struct p0f_api_response* r) {
 
   }
 
+  r->link_mtu = h->link_mtu;
+
   if (h->link_type)
     strncpy((char*)r->link_type, (char*)h->link_type, P0F_STR_MAX + 1);
 
