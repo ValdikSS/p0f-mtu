@@ -27,24 +27,28 @@ sig   = 1500
 ; Common DSL-specific values (1492 is canonical for PPPoE, but ISPs tend to
 ; horse around a bit):
 
-label = DSL
+label = PPPoE
 sig   = 1452
 sig   = 1454
 sig   = 1492
+
+label = L2TP
+sig   = 1456
 
 ; Miscellanous tunnels (including VPNs, IPv6 tunneling, etc):
 
 label = GIF
 sig   = 1240
+
+label = Probably IPsec or other VPN
 sig   = 1280
+sig   = 1400
 
 label = generic tunnel or VPN
 sig   = 1300
-sig   = 1400
 sig   = 1420
 sig   = 1440
 sig   = 1450
-sig   = 1460
 
 label = IPSec or GRE
 sig   = 1476
@@ -54,6 +58,46 @@ sig   = 1480
 
 label = PPTP
 sig   = 1490
+sig   = 1460
+
+; OpenVPN
+
+label = OpenVPN UDP bs64 SHA1
+sig   = 1409
+
+label = OpenVPN TCP bs64 SHA1
+sig   = 1407
+
+label = OpenVPN UDP bs64 SHA1 lzo
+sig   = 1408
+
+label = OpenVPN TCP bs64 SHA1 lzo
+sig   = 1406
+
+label = OpenVPN UDP bs128 SHA1
+sig   = 1393
+
+label = OpenVPN TCP bs128 SHA1
+sig   = 1391
+
+label = OpenVPN UDP bs128 SHA1 lzo
+sig   = 1392
+
+label = OpenVPN TCP bs128 SHA1 lzo
+sig   = 1390
+
+label = OpenVPN UDP bs128 SHA256
+sig   = 1381
+
+label = OpenVPN TCP bs128 SHA256
+sig   = 1379
+
+label = OpenVPN UDP bs128 SHA256 lzo
+sig   = 1380
+
+label = OpenVPN TCP bs128 SHA256 lzo
+sig   = 1378
+
 
 ; Really exotic stuff:
 
