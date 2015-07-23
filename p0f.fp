@@ -666,6 +666,11 @@ sig   = 1:Host,Accept-Encoding=[gzip],Accept-Language=[en-US],Accept=[*/*;q=0.5]
 label = s:!:Android:4.x
 sys   = Linux
 sig   = 1:Host,Connection=[keep-alive],Accept=[,*/*;q=0.8],User-Agent,Accept-Encoding=[gzip,deflate],Accept-Language,Accept-Charset=[utf-16, *;q=0.7]::Android
+sig   = 1:Host,Connection=[keep-alive],Accept=[,*/*;q=0.8],User-Agent,Accept-Encoding=[gzip,deflate],Accept-Language,X-Requested-With=[com.android.browser]::Android
+
+label = g:!:Android:
+sys   = Linux
+sig   = 1:Host,User-Agent=[Android],::Android
 
 ; ------
 ; Safari
@@ -683,6 +688,12 @@ sig   = *:Host,User-Agent,Accept=[*/*],?Referer,Accept-Encoding=[gzip, deflate],
 label = s:!:Safari:5.0 or earlier
 sys   = Mac OS X
 sig   = 0:Host,User-Agent,Connection=[close]:Accept,Accept-Encoding,Accept-Language,Accept-Charset:CFNetwork/
+
+label = g:!:iOS Browser:
+sys   = iOS,MacOS X,Mac OS X
+sig   = *:Host,User-Agent=[iPad; CPU]::KHTML, like Gecko)
+sig   = *:Host,User-Agent=[iPhone; CPU]::KHTML, like Gecko)
+sig   = *:Host,User-Agent=[iPod; CPU]::KHTML, like Gecko)
 
 ; ---------
 ; Konqueror
