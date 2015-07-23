@@ -610,6 +610,10 @@ sys   = Windows
 sig   = 0:Accept=[*/*],?Referer,User-Agent,Host:Keep-Alive,Connection,Accept-Encoding,Accept-Language,Accept-Charset:(compatible; MSIE
 sig   = 1:Accept=[*/*],Connection=[Keep-Alive],Host,?Pragma=[no-cache],?Range,?Referer,User-Agent:Keep-Alive,Accept-Encoding,Accept-Language,Accept-Charset:(compatible; MSIE
 
+label = g:!:MSIE:Mobile
+sys   = Windows
+sig   = 1:User-Agent=[IEMobile]::Windows Phone
+
 ; ------
 ; Chrome
 ; ------
