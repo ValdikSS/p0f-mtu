@@ -105,6 +105,7 @@ struct host_data {
 
   u8  last_quality;                     /* Generic or fuzzy match?            */
 
+  u16 link_mtu;                         /* Link MTU value                     */
   u8* link_type;                        /* MTU-derived link type              */
 
   u8  cli_scores[NAT_SCORES];           /* Scoreboard for client NAT          */
