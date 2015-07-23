@@ -216,10 +216,10 @@ label = s:unix:Mac OS X:10.x
 sig   = *:64:0:*:65535,1:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
 sig   = *:64:0:*:65535,3:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
 
-label = s:unix:MacOS X:10.9 or newer (sometimes iPhone or iPad)
+label = s:unix:Mac OS X:10.9 or newer (sometimes iPhone or iPad)
 sig   = *:64:0:*:65535,4:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
 
-label = s:unix:iOS:iPhone or iPad
+label = s:unix:Mac OS X:iPhone or iPad
 sig   = *:64:0:*:65535,2:mss,nop,ws,nop,nop,ts,sok,eol+1:df,id+:0
 
 ; Catch-all rules:
@@ -546,7 +546,7 @@ sig   = 4:64:0:1460:mss*25,0:mss:df,id+:0
 
 [http:request]
 
-ua_os = Linux,Windows,iOS=[iPad],iOS=[iPhone],Mac OS X,FreeBSD,OpenBSD,NetBSD,Solaris=[SunOS]
+ua_os = Linux,Windows,Mac OS X,FreeBSD,OpenBSD,NetBSD,Solaris=[SunOS]
 
 ; -------
 ; Firefox
@@ -694,10 +694,10 @@ sys   = Mac OS X
 sig   = 0:Host,User-Agent,Connection=[close]:Accept,Accept-Encoding,Accept-Language,Accept-Charset:CFNetwork/
 
 label = g:!:iOS Browser:
-sys   = iOS,MacOS X,Mac OS X
-sig   = *:Host,User-Agent=[iPad; CPU]::KHTML, like Gecko)
-sig   = *:Host,User-Agent=[iPhone; CPU]::KHTML, like Gecko)
-sig   = *:Host,User-Agent=[iPod; CPU]::KHTML, like Gecko)
+sys   = Mac OS X
+sig   = *:Host,User-Agent=[iPad]::Mac OS X
+sig   = *:Host,User-Agent=[iPhone]::Mac OS X
+sig   = *:Host,User-Agent=[iPod]::Mac OS X
 
 ; ---------
 ; Konqueror
