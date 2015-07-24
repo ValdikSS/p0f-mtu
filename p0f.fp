@@ -623,6 +623,8 @@ label = s:!:Firefox:10.x or newer
 sys   = Windows,@unix
 sig   = *:Host,User-Agent,Accept=[,*/*;q=],?Accept-Language=[;q=],Accept-Encoding=[gzip, deflate],?DNT=[1],Connection=[keep-alive],?Referer:Accept-Charset,Keep-Alive:Firefox/
 sig   = *:Host,User-Agent,Accept=[,*/*;q=],?Accept-Language=[;q=],Accept-Encoding=[gzip, deflate],?DNT=[1],?Referer,Connection=[keep-alive]:Accept-Charset,Keep-Alive:Firefox/
+sig   = *:Accept=[,*/*;q=],Accept-Encoding=[gzip, deflate],Accept-Language=[;q=],?Cache-Control,Host,?Pragma,User-Agent,Connection=[keep-alive]:Accept-Charset,Keep-Alive:Firefox/
+
 
 ; There is this one weird case where Firefox 10.x is indistinguishable
 ; from Safari 5.1:
@@ -671,6 +673,7 @@ sig   = 1:Host,User-Agent,Accept=[*/*],?Referer,Accept-Encoding=[gzip,deflate,sd
 label = s:!:Chrome:27.x or newer
 sys   = Windows,@unix
 sig   = 1:Host,Connection=[keep-alive],Accept=[*/*],User-Agent,?Referer,Accept-Encoding=[gzip,deflate,sdch],Accept-Language:Accept-Charset,Keep-Alive: Chrom
+sig   = 1:Host,Connection=[keep-alive],Accept=[*/*;q=0.8],User-Agent,Accept-Encoding=[gzip, deflate],Accept-Language=[;q=0.]:Accept-Charset,Keep-Alive:OPR/
 
 ; -----
 ; Opera
@@ -679,10 +682,6 @@ sig   = 1:Host,Connection=[keep-alive],Accept=[*/*],User-Agent,?Referer,Accept-E
 label = s:!:Opera:19.x or newer
 sys   = Windows,@unix
 sig   = 1:Host,Connection=[keep-alive],Accept=[*/*;q=0.8],User-Agent,Accept-Encoding=[gzip,deflate,lzma,sdch],Accept-Language=[;q=0.]:Accept-Charset,Keep-Alive:OPR/
-
-label = s:!:Opera:15.x-18.x
-sys   = Windows,@unix
-sig   = 1:Host,Connection=[keep-alive],Accept=[*/*;q=0.8],User-Agent,Accept-Encoding=[gzip, deflate],Accept-Language=[;q=0.]:Accept-Charset,Keep-Alive:OPR/
 
 label = s:!:Opera:11.x-14.x
 sys   = Windows,@unix
