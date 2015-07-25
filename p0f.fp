@@ -751,6 +751,11 @@ sys   = Windows,@unix
 sig   = 1:Host,Connection=[keep-alive],Accept=[*/*],User-Agent,?Referer,Accept-Encoding=[gzip,deflate,sdch],Accept-Language:Accept-Charset,Keep-Alive: Chrom
 sig   = 1:Host,Connection=[keep-alive],Accept=[*/*;q=0.8],User-Agent,Accept-Encoding=[gzip, deflate],Accept-Language=[;q=0.]:Accept-Charset,Keep-Alive:OPR/
 
+label = g:!:Chrome:or Chromium
+sys   = Windows,@unix
+sig   = 1:User-Agent=[Chrome/]::like Gecko
+sig   = 1:User-Agent=[Chromium/]::like Gecko
+
 ; -----
 ; Opera
 ; -----
